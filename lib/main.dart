@@ -9,7 +9,7 @@ void main() async{
   Hive.registerAdapter(TaskAdapter());
   Hive.registerAdapter(TaskStatusAdapter());
   await Hive.openBox<Task>('tasks');
-  var tasksBox = await Hive.openBox('testBox');
+  await Hive.openBox('testBox');
 
 
   // Initializing Navigation Helper Singleton
