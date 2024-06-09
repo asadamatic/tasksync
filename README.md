@@ -1,16 +1,21 @@
 # tasksync
 
-A new Flutter project.
+Task management app written in Flutter.
 
-## Getting Started
+## Using `go_touer` 
+Go router is a good interface for Navigator 2.0 and is officially maintained by Flutter, which makes it my go to choice for routing.
 
-This project is a starting point for a Flutter application.
+## Using `hive` db
+Hive provides an easy way to store objects by creating adaptors and is supported on all platforms. It's just easier to set it up. A closer competitor is `isar` but I have not experienced it.
 
-A few resources to get you started if this is your first Flutter project:
+## Deviation from Clean Architecture
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Use Cases
+Normall, I will skip the use cases if all they do is calling an method from the repository, and does no have to manage any business logic.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Models that Extend Entities
+Returning Model objects from the data layer, results in type mismatch at run time, which requires creating translators for interconversion of entity and model. To avoid make it more complex, it skip this part.
+
+## Tests
+I do not have experience in writing tests, though I can write some basic tests. I've left the Riverpod testing part.
+
