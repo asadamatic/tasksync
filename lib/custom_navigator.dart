@@ -57,7 +57,7 @@ class CustomNavigationHelper {
           path: tasksListRouteName.route,
           name: tasksListRouteName,
           builder: (context, state) {
-            return TasksListScreen();
+            return const TasksListScreen();
           },
           routes: [
             GoRoute(
@@ -66,7 +66,7 @@ class CustomNavigationHelper {
               name: taskRouteName,
               builder: (context, state) {
 
-                return TaskScreen();
+                return const TaskScreen();
               },
             
             ),

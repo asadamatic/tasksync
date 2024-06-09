@@ -23,7 +23,7 @@ class Task extends Equatable {
     String? id,
     required this.title,
     this.status = TaskStatus.pending,
-  }) : id = id ?? Uuid().v4();
+  }) : id = id ?? const Uuid().v4();
 
   @override
   List<Object?> get props => [id, title, status];
